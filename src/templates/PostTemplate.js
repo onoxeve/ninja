@@ -93,7 +93,7 @@ const PostTemplate = props => {
       <Article>
         <Heading title={title} />
         <Meta
-          author="greg"
+          author="onoxeve"
           prefix={prefix}
           categories={categories}
           icons={metaIcons}

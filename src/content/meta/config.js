@@ -1,21 +1,21 @@
 const base = {
-  name: 'Gatsby Starter Kit',
-  url: 'https://github.com/greglobinski/gatsby-starter-kit'
+  name: 'onox blog',
+  url: ''
 };
 
 const config = {
   /* meta tags */
-  siteTitle: `${base.name} - a set of starters for Gatsby.js`,
+  siteTitle: `${base.name}`,
   siteTitlePostfix: ` - ${base.name}`,
   siteDescription: `${
     base.name
-  } is a set of starters: Minimal, Equipped, Themed, Website, Blog.`,
+  } is Ninja Blog.`,
   siteImage: 'preview.jpg',
   siteLanguage: 'en',
 
   /* site header */
   headerTitle: `${base.name}`,
-  headerSubTitle: 'a set of starters for Gatsby.js',
+  headerSubTitle: '',
 
   /* url */
   siteUrl: base.url,
@@ -23,7 +23,7 @@ const config = {
 
   /* manifest */
   manifestName: `${base.name}`,
-  manifestShortName: 'GatsbyKit', // max 12 characters
+  manifestShortName: `${base.name}`, // max 12 characters
   manifestStartUrl: '/index.html',
   manifestBackgroundColor: '#ffffff',
   manifestThemeColor: '#ffffff',
