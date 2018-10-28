@@ -51,7 +51,7 @@ const BlogPage = props => {
         <Menu items={menu} />
       </Header>
       <Article>
-        <Blog items={posts} author={'greg'} metaIcons={metaIcons} />
+        <Blog items={posts} author={'onoxeve'} metaIcons={metaIcons} />
       </Article>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
       <Seo
