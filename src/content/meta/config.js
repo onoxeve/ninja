@@ -1,6 +1,6 @@
 const base = {
   name: 'onox blog',
-  url: ''
+  url: 'https://onoxeve.com'
 };
 
 const config = {
