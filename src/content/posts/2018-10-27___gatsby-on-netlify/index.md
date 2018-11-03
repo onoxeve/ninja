@@ -10,7 +10,7 @@ React製の静的サイトジェネレータ[Gatsby](https://www.gatsbyjs.org/)�
 ## Gatsby導入
 
 1. Gatsbyのcliツールを入れる。
-```sh
+```bash
 npm install --global gatsby-cli
 ```
 
