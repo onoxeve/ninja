@@ -6,7 +6,7 @@ import BlogIcon from 'react-feather/dist/icons/book';
 const menu = [
   { label: 'Home', to: '/', icon: HomeIcon },
   { label: 'Blog', to: '/blog', icon: BlogIcon },
-  { label: 'Privacy', to: '/privacy', icon: FolderIcon },
+  // { label: 'Category', to: '/categories', icon: FolderIcon },
   { label: 'About', to: '/about', icon: InfoIcon }
 ];
 

@@ -1,7 +1,10 @@
 ---
 title: Docker Imageのtag listをCLIで取得する
 cover:
+categories: ['tech']
 ---
+
+Docker Imageのtag listをCLIで取得するための手順。
 
 ## なぜ
 Docker Hub上での目視確認が辛いため。

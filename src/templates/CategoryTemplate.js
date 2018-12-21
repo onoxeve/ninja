@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import TagIcon from 'react-feather/dist/icons/tag';
 
-import 'prismjs/themes/prism-okaidia.css';
+import 'prismjs/themes/prism-tomorrow.css';
 import '@react-website-themes/default/styles/variables';
 import '@react-website-themes/default/styles/global';
 

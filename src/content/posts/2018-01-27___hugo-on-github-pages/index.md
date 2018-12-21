@@ -1,9 +1,10 @@
 ---
 title: Hugo on GitHub Pages
 cover:
+categories: ['tech']
 ---
 
-MacOSに`Hugo`をインストールして、`GitHub Pages`で公開するまでの手順。
+MacOSにHugoをインストールして、GitHub Pagesで公開するまでの手順。
 
 ## Hugoとは
 オープンソースの静的サイトジェネレーター(Go言語)。とにかくビルド(記事生成の動作)が速いとのことで採用した。他のジェネレーターとしては、GitHub製の`Jekyll`などが有名。

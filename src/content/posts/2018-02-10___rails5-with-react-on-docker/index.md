@@ -1,9 +1,10 @@
 ---
 title: Rails5.1 Webpacker + React on Docker
 cover:
+categories: ['tech']
 ---
 
-`Rails5.1 + Webpacker + React`な開発環境をDockerで作る際の手順。
+Rails5.1 + Webpacker + Reactな開発環境をDockerで作る際の手順。
 
 ## 0. 実施環境
 - maxOS: High Sierra Version 10.13.3

@@ -1,7 +1,7 @@
 ---
 title: Gatsby on Netlify
-subTitle:
 cover:
+categories: ['tech']
 ---
 
 ## Gatsby on Netlify

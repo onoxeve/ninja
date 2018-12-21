@@ -2,4 +2,5 @@
 name: footerLinks
 ---
 
-- Github: [onoxeve](https://github.com/onoxeve)
+- [Github](https://github.com/onoxeve)
+- [PrivacyPolicy](./privacy)
