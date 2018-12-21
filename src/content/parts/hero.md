@@ -4,4 +4,5 @@ name: hero
 
 # Welcome to onox blog
 
-[more](./about)
+[about](./about)
+[blog](./blog)
