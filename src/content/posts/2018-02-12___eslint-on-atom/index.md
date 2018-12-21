@@ -1,9 +1,13 @@
 ---
 title: Atomにeslintの導入
 cover:
+categories: ['tech']
 ---
 
+Atomにeslintを導入する際の手順。
+
 ## 実施環境
+
 ```yaml
 node: v9.5.0
 yarn: 1.3.2

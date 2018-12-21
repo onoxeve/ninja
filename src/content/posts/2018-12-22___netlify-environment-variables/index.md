@@ -1,7 +1,10 @@
 ---
-title: Netlifyの環境変数を用いてAnalyticsを導入する
+title: Netlifyの環境変数を用いてGatsbyにAnalyticsを導入する
 cover:
+categories: ['tech']
 ---
+
+Netlifyの環境変数を用いてGatsbyにAnalyticsを導入するまでの手順。
 
 ## 背景
 

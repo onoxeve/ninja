@@ -1,11 +1,12 @@
 ---
 title: AWS請求額をSlackに通知する
 cover:
+categories: ['tech']
 ---
 
-## 概要
-
 AWS請求情報をCloudWatchから取得して、日次でSlackに通知させます。
+
+## 概要
 
 1. Slack APIの設定  
 外部サービスからSlackに投稿できるようAPIの設定をします。

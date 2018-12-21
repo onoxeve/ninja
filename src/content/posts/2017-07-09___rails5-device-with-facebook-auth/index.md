@@ -1,6 +1,7 @@
 ---
 title: Rails5 DeviceのSNS認証後に独自のユーザ登録フォームを実装
 cover:
+categories: ['tech']
 ---
 
 Devise + omniauthでFacebook認証を実装する手順。(独自のユーザ登録フォーム付き)

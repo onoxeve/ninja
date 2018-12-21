@@ -1,6 +1,7 @@
 ---
 title: GitHub Pages 独自ドメインをCloudFrontでSSL化
 cover:
+categories: ['tech']
 ---
 
 GitHub Pageの独自ドメインを、前段にCDN(今回はCloudFront)を使ってSSL化(HTTPS化)させる手順。

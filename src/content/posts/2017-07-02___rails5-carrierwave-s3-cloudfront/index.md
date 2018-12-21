@@ -1,18 +1,20 @@
 ---
 title: Rails5 Carrierwave + S3 + Cloudfrontで画像アップロード
 cover:
+categories: ['tech']
 ---
 
 Carrierwave + S3 + Cloudfrontで画像アップロードを実装する手順。
 
 ## 環境
-```
+
+```yaml
 ruby: 2.3.3
 imagemagick: 6.8
-rails (5.1.1)
-carrierwave (1.1.0)
-fog-aws (1.3.0)
-rmagick (2.16.0)
+rails: 5.1.1
+carrierwave: 1.1.0
+fog-aws: 1.3.0
+rmagick: 2.16.0
 ```
 
 ## 概要
@@ -33,7 +35,8 @@ https://github.com/ImageMagick/ImageMagick
 別途、サーバに`ImageMagick`がインストールされている必要があります。
 
 例: `Ubuntu14.04`でのインストール
-```
+
+```bash
 sudo apt-get update
 sudo apt-get install -y imagemagick libmagick++-dev
 ```
@@ -41,6 +44,7 @@ sudo apt-get install -y imagemagick libmagick++-dev
 ## Carrierwave入門
 公式に沿って、UserモデルにAvater画像をアップロードできるようにします。
 https://github.com/carrierwaveuploader/carrierwave  
+
 ```
 `Getting Started`
 `Using Amazon S3`
