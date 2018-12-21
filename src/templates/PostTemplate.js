@@ -35,6 +35,8 @@ import FacebookIcon from 'react-feather/dist/icons/facebook';
 import TwitterIcon from 'react-feather/dist/icons/twitter';
 import EmailIcon from 'react-feather/dist/icons/mail';
 
+import AdSense from 'react-adsense';
+
 const metaIcons = {
   calendar: CalendarIcon,
   user: UserIcon,
@@ -99,6 +101,10 @@ const PostTemplate = props => {
           icons={metaIcons}
         />
         <Bodytext html={postHTML} />
+        <AdSense.Google
+          client='ca-pub-4357144858136704'
+          slot=''
+        />
         <Share shareBlockProps={shareBlockProps} />
         <NextPrev next={next} prev={prev} icons={nextPrevIcons} />
         <Author html={authorHTML} />
