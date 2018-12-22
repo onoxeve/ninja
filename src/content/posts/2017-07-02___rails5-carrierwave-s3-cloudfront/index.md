@@ -24,12 +24,12 @@ rmagick: 2.16.0
 
 ### fogとは
 クラウドサービス連携用のライブラリです。AWSだけでなく、Azule, GCPなども用意されてます。  
-https://github.com/fog/fog  
+[fog](https://github.com/fog/fog)  
 >fog is the Ruby cloud services library, top to bottom:
 
 ### rmagickとは
 画像処理ソフトウェアの`ImageMagick`をRubyで使えるようにするライブラリです。  
-https://github.com/ImageMagick/ImageMagick  
+[ImageMagick](https://github.com/ImageMagick/ImageMagick  )
 >ImageMagick® is a software suite to create, edit, compose, or convert bitmap images.
 
 別途、サーバに`ImageMagick`がインストールされている必要があります。
@@ -42,13 +42,12 @@ sudo apt-get install -y imagemagick libmagick++-dev
 ```
 
 ## Carrierwave入門
-公式に沿って、UserモデルにAvater画像をアップロードできるようにします。
-https://github.com/carrierwaveuploader/carrierwave  
+[公式](https://github.com/carrierwaveuploader/carrierwave)に沿って、UserモデルにAvater画像をアップロードできるようにします。  
 
 ```
-`Getting Started`
-`Using Amazon S3`
-`Using RMagick`
+Getting Started
+Using Amazon S3
+Using RMagick
 ```
 
 Gemfile
@@ -101,7 +100,8 @@ end
 
 ## Carrierwave 設定カスタマイズ(サンプル)
 
-### `app/uploaders/avatar_uploader.rb`
+### avatar_uploader.rb
+`app/uploaders/avatar_uploader.rb`
 最初から色んなサンプルが記載されており親切です。
 
 ```ruby
@@ -167,19 +167,17 @@ Rmagickのauto_orientメソッドで向きを正す。
 iPhoneに保存された写真は`向きの情報`を持っているが、
 ブラウザによってはそれを無視して表示してしまうことが原因です。
 
-参考: アップロードした写真（画像）が回転して表示されるのを直す方法
-http://qiita.com/hiro_y/items/0476bcf39a77ca184009
+参考: [アップロードした写真（画像）が回転して表示されるのを直す方法](http://qiita.com/hiro_y/items/0476bcf39a77ca184009)
 
 >ファイル名の設定(以下はランダムな16進数文字列をファイル名の先頭に付与している例)
 
 READMEには記載がないですが、公式wikiに詳細が載っています。
 基本は`UUID`を用いたユニークな文字列が推薦されています。
 
-参考: How to: Create random and unique filenames for all versioned files
-https://github.com/carrierwaveuploader/carrierwave/wiki/How-to:-Create-random-and-unique-filenames-for-all-versioned-files
+参考: [How to: Create random and unique filenames for all versioned files](https://github.com/carrierwaveuploader/carrierwave/wiki/How-to:-Create-random-and-unique-filenames-for-all-versioned-files)
 
-### `config/initializers/carrierwave.rb`
-デフォルトだと存在しないので作成します。
+### carrierwave.rb作成
+`config/initializers/carrierwave.rb`を作成します。
 S3, CloudFrontの設定情報を記載します。
 私の場合は、概ねの設定を`Figaro`で環境変数に設定しています。
 
@@ -207,7 +205,7 @@ CarrierWave.configure do |config|
 end
 ```
 
-### `app/models/user.rb`
+### `models/user.rb`
 このままだと画像を削除してもS3には残ってしまうため、
 `before_destroy`でS3の画像を削除します。
 
@@ -225,7 +223,7 @@ private
   end
 end
 ```
-参考: https://stackoverflow.com/questions/22391183/carrierwave-destroy-object-only-after-mounted-files-have-been-deleted-from-sto
+参考: [destroy object only after mounted files have been deleted from storage](https://stackoverflow.com/questions/22391183/carrierwave-destroy-object-only-after-mounted-files-have-been-deleted-from-sto)
 
 ## view側の設定
 

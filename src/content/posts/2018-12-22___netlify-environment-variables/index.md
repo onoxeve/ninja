@@ -52,4 +52,4 @@ Value: <AnalyticsのトラッキングID>
 
 デプロイ後、Analytics上で計測できているか確認して終わり。  
 リアルタイムユーザ数が増えていればOK！
-![analytics](https://user-images.githubusercontent.com/27343529/50356980-9df83200-0597-11e9-9212-068755702f2f.png)
+![analytics](./analytics.png)
