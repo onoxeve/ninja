@@ -1,0 +1,66 @@
+---
+title: GatsbyにAdsenseを導入する
+cover:
+categories: ['tech']
+---
+
+GatsbyにAdsenseを導入(審査用コード)する手順。
+
+## 事前準備
+
+[Privacy Policyを念のため用意した。](../privacy)
+Privacy Policyの書き方はググると色々出てくるが、今のところAdSenseしか利用してないので、[必須コンテンツ - AdSense ヘルプ](https://support.google.com/adsense/answer/1348695?hl=ja)に沿ってピンポイントで作成した。  
+
+## 概要
+
+GatsbyのPluginとして[gatsby-plugin-google-adsensee](https://github.com/callicoder/gatsby-plugin-google-adsense#readme)があったが、上手く動かなかった。(scriptタグが読み込まれない..)  
+よってReact用のPluginである[react-adsense](https://github.com/hustcc/react-adsense)を使うことにした。
+
+## 1. react-adsenseのインストール
+
+```bash
+npm install --save react-adsense
+```
+
+## 2. Gatsby Templateの修正
+
+Adsenseサイト上で払い出された広告タグを配置する。
+記事ページにだけ配置したところ、Adsenseサイトで実施するコードチェックに失敗してしまった。
+どうやらトップページを見ているようなので、暫定的にトップページにもタグを追加している。  
+
+> Base Template
+
+`src/html.js`
+
+```js
+import AdSense from 'react-adsense';
+
+<head>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  // トップページには表示させないので不要だが、Adsenseサイトからコードが見つからなかったので追加
+  <AdSense.Google
+    // 払い出されたcaから始まるコードに置き換える
+    client='xxx'
+    // 広告スロットはまだ作成してないので、空欄でOK
+    slot=''
+  />
+</head>
+```
+
+> Post Template
+
+`src/templates/PostTemplate.js`
+
+```js
+import AdSense from 'react-adsense';
+
+<Article>
+  // 広告を表示させたい位置に配置
+  <AdSense.Google
+    // 払い出されたcaから始まるコードに置き換える
+    client='xxx'
+    // 広告スロットはまだ作成してないので、空欄でOK
+    slot=''
+  />
+</Article>
+```
