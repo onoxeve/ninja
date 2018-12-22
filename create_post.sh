@@ -15,4 +15,5 @@ touch index.md
 echo "---" >> index.md
 echo "title:" >> index.md
 echo "cover:" >> index.md
+echo "categories: ['tech']" >> index.md
 echo "---" >> index.md
