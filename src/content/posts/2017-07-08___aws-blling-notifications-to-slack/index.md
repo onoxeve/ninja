@@ -17,16 +17,14 @@ Lambdaの公式サンプルコードを修正し、CloudWatch Eventで定期的�
 
 ## Slack APIの登録
 
-`Incoming WebHooks`の登録をします。
-https://my.slack.com/services/new/incoming-webhook/
+[Incoming WebHooksの登録をします。](https://my.slack.com/services/new/incoming-webhook/)
 
 - 投稿するチャンネルを選択して、`Add Incoming WebHooks Integration`
 - 登録後、`Webhook URL`を控えておきます。
 
 ## KMSの設定
 
-IAMよりKMS keyを作成します。
-http://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html
+[IAMよりKMS keyを作成します。](http://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html)
 
 ## Lambdaの設定
 
@@ -158,11 +156,8 @@ kmsEncryptedHookUrl: Webhook URL(e.g. "hooks.slack.com/services/abc123")
 
 ### Lambda function handler and role
 
-Lambda用の新しいRoleを作成します。ここではRoleの名前だけ入力します。
-Lambda function作成後、IAMに移動しRoleの`Permissions`を変更します。
-
-http://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_roles_manage_modify.html  
->To change the permissions allowed by a role
+Lambda用の新しいRoleを作成します。ここではRoleの名前だけ入力します。  
+[Lambda function作成後、IAMに移動しRoleの`Permissions`を変更します。](http://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_roles_manage_modify.html)
 
 1. `Attach Policy`で`CloudWatchReadOnlyAccess`を追加します。
 1. `Inline Policies`で`Custom Policy`を作成します。
@@ -187,12 +182,11 @@ http://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_roles_manage_modify.htm
 
 ### CloudWatch Eventsの設定
 
-CloudWatch EventsのRulesを作成します。
-http://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/events/RunLambdaSchedule.html  
+[CloudWatch EventsのRulesを作成します。](http://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/events/RunLambdaSchedule.html)  
+
 >ステップ 2: ルールを作成する
 
-cron(UTC)を設定します。
-http://docs.aws.amazon.com/ja_jp/lambda/latest/dg/tutorial-scheduled-events-schedule-expressions.html  
+[cron(UTC)を設定します。](http://docs.aws.amazon.com/ja_jp/lambda/latest/dg/tutorial-scheduled-events-schedule-expressions.html) 
 >Rate または Cron を使用したスケジュール式
 
 例: 日本時間09:00に通知
@@ -207,20 +201,12 @@ http://docs.aws.amazon.com/ja_jp/lambda/latest/dg/tutorial-scheduled-events-sche
 
 ## 実行結果(サンプル)
 
-![monitor | onox Slack 2017-07-08 11-27-23.png](https://qiita-image-store.s3.amazonaws.com/0/190125/f62dfeef-9b82-274c-757c-8432238182ec.png)
+![slack](./aws_slack_notify.png)
 
+## 参考リンク
 
-## CloudWatch 参考リンク
+[CloudWatch メトリクスを発行する AWS のサービス - Amazon CloudWatch](https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
 
-AWS Billing and Cost Management のディメンションおよびメトリックス
-http://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/billing-metricscollected.html
+[Basic message formatting | Slack](https://api.slack.com/docs/message-formatting)
 
-AWS SDK for Python (Boto3)を使ってCloudWatchの値を取得してみた
-http://dev.classmethod.jp/cloud/aws/get_value_of_cloudwatch_using_boto3/
-
-## Slack API 参考リンク
-https://api.slack.com/docs/message-formatting  
->Formatting and Attachments
-
-https://api.slack.com/docs/message-attachments  
->Attaching content and links to messages
+[Attaching content and links to messages | Slack](https://api.slack.com/docs/message-attachments)
