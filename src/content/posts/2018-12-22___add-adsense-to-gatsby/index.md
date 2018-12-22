@@ -64,3 +64,32 @@ import AdSense from 'react-adsense';
   />
 </Article>
 ```
+
+## 3. 審査に通った後(追記)
+
+3時間ほどで無事審査に通ったので、Gatsby側の修正を実施する。  
+
+> Base Template
+
+トップページではscriptタグだけあれば問題ないので、react-adsenseのimportを削除する。
+
+`src/html.js`
+```js
+import AdSense from 'react-adsense';
+```
+
+> Post Template
+
+Adsense上で新規広告ユニットを作成し、広告タグを生成する。  
+今回は記事内広告を作ってみた。以下のよう修正してdone。
+対応しているオプションは、公式[react-adsense](https://github.com/hustcc/react-adsense)参照。
+
+`src/templates/PostTemplate.js`
+```js
+<AdSense.Google
+  style={{ display: 'block', 'text-align': 'center' }}
+  client='ca-pub-xxx'
+  slot='xxx'
+  format='fluid'
+/>
+```

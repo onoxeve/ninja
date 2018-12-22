@@ -102,8 +102,10 @@ const PostTemplate = props => {
         />
         <Bodytext html={postHTML} />
         <AdSense.Google
+          style={{ display: 'block', 'text-align': 'center' }}
           client='ca-pub-4357144858136704'
-          slot=''
+          slot='5257523357'
+          format='fluid'
         />
         <Share shareBlockProps={shareBlockProps} />
         <NextPrev next={next} prev={prev} icons={nextPrevIcons} />
