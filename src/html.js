@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// TODO: 認証完了後に消す
-import AdSense from 'react-adsense';
-
 export default class HTML extends React.Component {
   render() {
     return (
@@ -29,10 +26,6 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
           <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <AdSense.Google
-            client='ca-pub-4357144858136704'
-            slot=''
-          />
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
