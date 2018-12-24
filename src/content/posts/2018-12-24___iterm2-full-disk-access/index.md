@@ -29,3 +29,18 @@ iTerm: 3.2
 3. フルディスクアクセスにiTermを追加
 
 3stepでdone。
+
+## フルディスクアクセス権限をつけてもbrew linkに失敗する(追記)
+
+なんと、`/usr/local/Frameworks`というディレクトリがそもそも存在してなかった。  
+というわけで、手動で作成して解決。
+
+```bash
+sudo mkdir /usr/local/Frameworks
+sudo chown $(whoami):admin /usr/local/Frameworks
+```
+
+```bash
+brew link carthage
+Linking /usr/local/Cellar/carthage/0.31.2... 4 symlinks created
+```
