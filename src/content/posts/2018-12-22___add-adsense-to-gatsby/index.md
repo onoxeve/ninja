@@ -8,7 +8,7 @@ GatsbyにAdsenseを導入(審査用コード)する手順。
 
 ## 事前準備
 
-[Privacy Policyを念のため用意した。](../privacy)
+[Privacy Policyを念のため用意した。](/privacy)
 Privacy Policyの書き方はググると色々出てくるが、今のところAdSenseしか利用してないので、[必須コンテンツ - AdSense ヘルプ](https://support.google.com/adsense/answer/1348695?hl=ja)に沿ってピンポイントで作成した。  
 
 ## 概要
