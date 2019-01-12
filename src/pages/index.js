@@ -15,6 +15,17 @@ import Seo from '@react-website-themes/default/components/Seo';
 import config from '../content/meta/config';
 import menu from '../content/meta/menu';
 
+// for css custom
+import { injectGlobal } from 'emotion';
+
+injectGlobal`
+  .css-1s1btau a {
+    width: 375px;
+    animation: none;
+    justify-content: center;
+  }
+`;
+
 const IndexPage = props => {
   const {
     data: {

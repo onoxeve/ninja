@@ -110,7 +110,15 @@ module.exports = {
                 allMarkdownRemark(
                   limit: 1000,
                   sort: { order: DESC, fields: [fields___prefix] },
-                  filter: { fields: { source: {eq: "posts"}, slug: { ne: null } } }
+                  filter: {
+                    fields: {
+                      source: {eq: "posts"},
+                      slug: { ne: null }
+                    },
+                    frontmatter: {
+                      categories: { eq: "tech" }
+                    }
+                   }
                 ) {
                   edges {
                     node {
