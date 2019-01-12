@@ -41,18 +41,25 @@ import AdSense from 'react-adsense';
 import { injectGlobal } from 'emotion';
 
 injectGlobal`
+  // for all
   .css-54iqau {
-    max-width: 800px;
+    max-width: 800px !important;
   }
-  .gatsby-highlight {
-    font-size: .9em;
-  }
+  // for code block
   :not(pre) > code[class*="language-"]{
     padding: .1em .4em;
     font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
   }
+  // for code block
+  .gatsby-highlight {
+    font-size: .9em;
+  }
   .css-1t5v1by pre {
     border-radius: .3em;
+  }
+  // for author
+  .css-1yrkae2 {
+    text-align: center;
   }
 `;
 
