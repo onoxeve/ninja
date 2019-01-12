@@ -35,7 +35,26 @@ import FacebookIcon from 'react-feather/dist/icons/facebook';
 import TwitterIcon from 'react-feather/dist/icons/twitter';
 import EmailIcon from 'react-feather/dist/icons/mail';
 
+// for adsense
 import AdSense from 'react-adsense';
+// for css custom
+import { injectGlobal } from 'emotion';
+
+injectGlobal`
+  .css-54iqau {
+    max-width: 800px;
+  }
+  .gatsby-highlight {
+    font-size: .9em;
+  }
+  :not(pre) > code[class*="language-"]{
+    padding: .1em .4em;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  }
+  .css-1t5v1by pre {
+    border-radius: .3em;
+  }
+`;
 
 const metaIcons = {
   calendar: CalendarIcon,
