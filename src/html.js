@@ -25,6 +25,7 @@ export default class HTML extends React.Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           {this.props.headComponents}
+          <meta name="google-site-verification" content="HwSRPpU5kDpsIelMtM7IaYyaOlu0Rag1lU3UrR9K3_U" />
           <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         </head>
         <body {...this.props.bodyAttributes}>
