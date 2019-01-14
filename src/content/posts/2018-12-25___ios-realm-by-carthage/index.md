@@ -75,7 +75,7 @@ xcodeのPreference -> Locations -> Command Line Tools
 projectの`General`settings -> `Linked Frameworks and Libraries`
 `RealmSwift.framework`と`Realm.framework`を追加する
 
-![xcoe_frameworks](./xcode_frameworks.png)
+![xcode_frameworks](./xcode_frameworks.png)
 
 次に、`Build Phases` -> `New Run Script Phase`に以下を追加
 (App Storeへの送信バグを回避するための作業らしい)
