@@ -11,7 +11,7 @@ const config = {
     base.name
   } is Ninja Blog.`,
   siteImage: 'preview.jpg',
-  siteLanguage: 'en',
+  siteLanguage: 'jp',
 
   /* site header */
   headerTitle: `${base.name}`,

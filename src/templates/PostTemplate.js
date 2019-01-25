@@ -39,6 +39,8 @@ import EmailIcon from 'react-feather/dist/icons/mail';
 import AdSense from 'react-adsense';
 // for css custom
 import { injectGlobal } from 'emotion';
+// for meta tags
+import { Helmet } from "react-helmet"
 
 injectGlobal`
   // for all
@@ -117,6 +119,10 @@ const PostTemplate = props => {
       <Header>
         <Branding title={headerTitle} subTitle={headerSubTitle} />
         <Menu items={menuItems} />
+        <Helmet>
+          <meta property="og:title" content={`${title}${siteTitlePostfix}`} />
+          <meta property="og:description" content={excerpt} />
+        </Helmet>
       </Header>
       <Article>
         <Heading title={title} />
@@ -128,7 +134,7 @@ const PostTemplate = props => {
         />
         <Bodytext html={postHTML} />
         <AdSense.Google
-          style={{ display: 'block', 'text-align': 'center' }}
+          style={{ display: 'block', 'textAlign': 'center' }}
           client='ca-pub-4357144858136704'
           slot='5257523357'
           format='fluid'
@@ -139,12 +145,6 @@ const PostTemplate = props => {
         <Comments slug={slug} siteUrl={siteUrl} />
       </Article>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
-      <Seo
-        url={`${siteUrl}${slug}`}
-        language={siteLanguage}
-        title={`${title}${siteTitlePostfix}`}
-        description={excerpt}
-      />
     </Layout>
   );
 };
